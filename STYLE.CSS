@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #1a73e8;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #1a73e8;
+}
+
+.chart-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.signal-box, .pattern-box, .news-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+    transition: border-color 0.3s;
+}
+
+.signal-box.active {
+    border-color: #ff4500;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
+}
+
+/* Table Styling for Signals and Patterns */
+.signal-table, .pattern-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.signal-table th, .signal-table td,
+.pattern-table th, .pattern-table td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.signal-table th, .pattern-table th {
+    background-color: #1a73e8;
+    color: white;
+}
+
+.signal-table tr:nth-child(even), .pattern-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.news-box {
+    text-align: left;
+}
+
+.news-article {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.news-article a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-article a:hover {
+    text-decoration: underline;
+}
+
+.news-article p {
+    margin: 5px 0;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1a73e8;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#tawkchat-container .tawk-button {
+    background-color: #1a73e8 !important;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#tawkchat-container .tawk-button:hover {
+    background-color: #1557b0 !important;
+}
+
+@media (max-width: 768px) {
+    .chart-container, .signal-box, .pattern-box, .news-box {
+        width: 100%;
+        max-width: none;
+    }
+
+    #chatbot-container {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .signal-table, .pattern-table {
+        font-size: 12px;
+    }
+
+    .signal-table th, .signal-table td {
+        padding: 4px;
+    }
+}
